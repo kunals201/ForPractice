@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Effects - Animate demo</title>
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+    .toggler { width: 100%; height: 250px;background-color:#cccccc ;position: relative ; border-radius:10px ; }
+    .toggler1 { width: 100%; height: 250px ;position: relative; }
+	#btn1 { padding: .5em 1em; text-decoration: none ; color:#763CE2 ;background-color:#3CE2DD; }
+	#btn2 { padding: .5em 1em; text-decoration: none ; color:#763CE2 ;background-color:#3CE2DD; }
+    #effect { width: 240px; height: 170px; padding: 0.4em; position: relative; background: #fff; }
+    #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+  </style>
+
+  <script>
+  $(document).ready(function(){
+   
+    var state = true;
+    $( "#btn1" ).on( "click", function() {
+      if ( state ) {
+        $( "#effect" ).animate({
+          backgroundColor: "#aa0000",
+          color: "#fff",
+          width: 500
+        }, 1000 );
+      } else {
+        $( "#effect" ).animate({
+          backgroundColor: "#fff",
+          color: "#000",
+          width: 240
+        }, 1000 );
+      }
+      state = !state;
+    });
+  $("#btn1").hover(function(){
+    $(this).css("background-color","black");
+    });
+    $("#flip").click(function(){
+        $("#content1").slideToggle("slow");
+   });
+   $("#img1").click(function(){
+   $("#img1").slideUp(1000).slideDown(1000);
+  
+   });
+    $("#btn2").click(function test() {
+             $("#img1").replaceWith("<img width=100% src='images/img102.jpg'>");
+            var l=setInterval("test()",50000);
+			});
+  } );
+  
+  </script>
+</head>
+<body>
+ <nav style="background-color:#cccccc" class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>	
+      <a class="navbar-brand" href=""><i><strong><u><img style="width:15%; height:25px " src="images/logo2.jpg" alt="No picture">WebDesign</u></strong></i></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+	  <form class="navbar-form navbar-left">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+		<ul class="dropdown-menu dropstyle">
+		<li><input type="text" placeholder="Username"></li>
+		<li><input type="text" placeholder="Password"></li>
+		<li><input style="margin-left:60px; color:black" type="submit" value="Login"></li>
+		</ul>
+		</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="toggler">
+  <div id="effect" style="background-color:#cccccc" class="ui-widget-content ui-corner-all">
+    <h3 class="ui-widget-header ui-corner-all">Animate</h3>
+    <p style="background-color:#cccccc">
+	We look Forward to seeing you at AMB Emporium. We will be adding more stores and products as they become available. We strive to bring you the best of the best. 
+</p>
+  </div>
+<button  id="btn1" class="ui-state-default ui-corner-all">Toggle Effect</button>
+  </div>
+ <div class="toggler1">
+ <img id="img1" src="images/img101.png" width="100%" alt="Image">
+<button id="btn2">Click</button>
+ <h1 id="flip">Click to show Hide contents</h1>
+ <p id="content1">Online shopping is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web browser. Consumers find a product of interest by visiting the website of the retailer .... Simple shopping cart systems allow the off-line administration of products and ...
+</p>
+ </div>
+
+ <!--<button id="btn1" class="ui-state-default ui-corner-all">Toggle Effect</button>-->
+ 
+ 
+</body>
+</html>

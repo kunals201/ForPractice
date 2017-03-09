@@ -1,0 +1,31 @@
+.imgsize{
+height:600px;
+}
+.fontcolor{
+color:gray;	
+}
+.designfoot{
+	color:#cccccc;
+}
+.gridheight{
+	height:350px;
+}
+.gridtext1{
+	margin-top:20px;
+}
+.gridtext2{
+	margin-top:165px;
+}
+.gridimg3{
+	margin-top:10px;
+	height:50px;
+}
+.gridimg4{
+	margin-top:5px;
+	height:120px;
+	width:80%
+	}
+	.dropstyle{
+		color:#cccccc;
+		background-color:black;
+		}
